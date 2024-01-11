@@ -45,23 +45,36 @@ export default function Home() {
       </div>
 
       {/* containers */}
-      <div className="container-fluid text-center" style={{ marginTop: '3vw' }}>
+      <div className="container-fluid text-center" style={{ marginTop: '5vw' }}>
         <h4>Welcome to Pharma Ease!</h4>
         <p>Some text</p>
 
         <div className="cardContainer">
-          <Card title="First card" text="Custom Text goes here." />
-          <Card title="Second card" text="Custom Text goes here." />
-          <Card title="Third card" text="Custom Text goes here." />
+          <Card title="Custom Title" text="Custom Text goes here." image="/images/placeholder.jpg" />
+          <Card title="Custom Title" text="Custom Text goes here." image="/images/placeholder.jpg" />
+          <Card title="Custom Title" text="Custom Text goes here." image="/images/placeholder.jpg" />
         </div>
 
-        <h4>Maybe even more text</h4>
-        <p style={{ marginBottom: '3vw' }}>Some more text that describes how cool and special and different our pharmacy is</p>
+        {/* featurette  */}
+        <hr className="featurette-divider"/>
+        <div className="row featurette" style={{ marginTop: '5vw' }}>
+          <div className="col-md-7">
+            <h2 className="featurette-heading fw-normal lh-1" style={{ marginTop: '12vw' }}>First featurette heading. <span className="text-muted">Itll blow your mind.</span></h2>
+            <p className="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+          </div>
+          <div className="col-md-5">
+            <Image src="/images/placeholder.jpg" alt="..." width={500} height={500} />
+          </div>
+        </div>
+        <hr className="featurette-divider"/>
+
+        <h4 style={{marginTop: '5vw'}}>Maybe even more text</h4>
+        <p style={{ marginBottom: '5vw' }}>Some more text that describes how cool and special and different our pharmacy is</p>
 
         {/* most popular products carousel */}
 
         <div style={{ marginBottom: '1vw' }}>
-          <h3 className="mb-3 text-center">Cold and flu treatments </h3>
+          <h3 className="mb-3 text-center" style={{marginTop: '5vw'}}>Cold and flu treatments </h3>
         </div>
 
         <div className="carousel carousel-dark slide" id="carouselExampleLight" style={{ marginBottom: '3vw' }}>
@@ -197,47 +210,6 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        {/* accordion  */}
-        <div className="accordion container" id="accordionExample" style={{ width: '85vw', marginBottom: '3vw' }}>
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingOne">
-              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Accordion Item #1
-              </button>
-            </h2>
-            <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-              <div className="accordion-body">
-                <strong>This is the first item is accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It is also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingTwo">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                Accordion Item #2
-              </button>
-            </h2>
-            <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-              <div className="accordion-body">
-                <strong>This is the second item is accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It is also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="headingThree">
-              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                Accordion Item #3
-              </button>
-            </h2>
-            <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-              <div className="accordion-body">
-                <strong>This is the third item is accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It is also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
               </div>
             </div>
           </div>
