@@ -75,14 +75,25 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  /* background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb)); */
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5vw;
+  margin-bottom: 3vw;
+  margin-top: 3vw;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3vw;
+  width: 32vw;
+  height: 85vh;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 
 a {
