@@ -23,7 +23,7 @@ export default function Home() {
             <Image src="/images/placeholder.jpg" className="d-block w-100" alt="..." width={1400} height={800} layout="responsive" style={{ objectFit: "cover" }} />
             <div className="carousel-caption d-none d-md-block">
               <h5>Second medicine</h5>
-              <p>I dont know</p>
+              <p>I  m losing my mind</p>
             </div>
           </div>
           <div className="carousel-item" style={{ height: '85vh' }}>
