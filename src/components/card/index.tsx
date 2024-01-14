@@ -1,16 +1,18 @@
+import Image from 'next/image'
+
 interface CardComponents {
   title: string;
   text: string;
+  image: string;
 }
 
-const Card: React.FC<CardComponents> = ({ title, text }) => {
+const Card: React.FC<CardComponents> = ({ title, text, image }) => {
   return (
-    <div className="card text-center" style={{ width: '20vw' }}>
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{text}</p>
-        <a href="#" className="btn btn-primary">Button</a>
-      </div>
+    <div className="col-lg-4">
+      <Image src={image} alt="..." width={140} height={140} className="bd-placeholder-img rounded-circle"/>
+      <h2 className="fw-normal">{title}</h2>
+      <p>{text}</p>
+      <p><a className="btn btn-secondary" href="#">View details »</a></p>
     </div>
   );
 };
