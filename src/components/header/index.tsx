@@ -23,14 +23,14 @@ export default function Header() {
                 <a className="nav-link" href="/">My Account</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/cart">
                   <span className="position-relative"><Image src="/images/cart2.svg" alt="Shopping Cart" width={27} height={27} />
                     <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">2</span>
                   </span>
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">Contact</a>
+                <a className="nav-link" href="/contact">Contact</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/login">Log In</a>
