@@ -49,7 +49,7 @@ export default function Home() {
         <h4>Welcome to Pharma Ease!</h4>
         <p>Some text</p>
 
-        <div className="cardContainer">
+        <div className="cardContainer" style={{margin: '5vw 0'}}>
           <Card title="Custom Title" text="Custom Text goes here." image="/images/placeholder.jpg" />
           <Card title="Custom Title" text="Custom Text goes here." image="/images/placeholder.jpg" />
           <Card title="Custom Title" text="Custom Text goes here." image="/images/placeholder.jpg" />

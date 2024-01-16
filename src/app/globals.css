@@ -80,8 +80,8 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5vw;
-  margin-top: 5vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
 }
 
 .formContainer {
@@ -92,7 +92,8 @@ body {
   margin-top: 3vw;
   width: 32vw;
   height: 85vh;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border: 1px solid gainsboro;
+  border-radius: 2vw;
 }
 
 a {
