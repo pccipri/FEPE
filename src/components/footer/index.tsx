@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <>
             {/* Footer component START */}
-            <div className="container position-sticky" style={{bottom: '0'}}>
+            <div className="container position-sticky" style={{bottom: '0', fontFamily: "'Quicksand', sans-serif"}}>
                 <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
                     <div className="col-md-4 d-flex align-items-center">
                         <span className="mb-3 mb-md-0 text-muted">© 2024 Pharma Ease Company</span>

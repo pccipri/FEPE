@@ -1,34 +1,45 @@
 export default function Contact() {
     return (
-        <div className="container col-xl-10 col-xxl-8 px-4 py-5">
-            <div className="row align-items-center g-lg-5 py-5">
-                <div className="col-lg-7 text-center text-lg-start"  style={{marginLeft: '2vw'}}>
-                    <h3 className="fw-bold">Contact Us</h3>
-                    <h4 className="fw-bold">Customer services</h4>
-                    <p className="fw-normal" style={{marginTop: '5vw'}}>Monday - Friday: 9:00am - 4.00pm</p>
-                    <p className="fw-normal">Call: 020 7989 9888 (call charges may apply)</p>
-                    <p className="fw-normal">Email: pharmaease@gmail.com</p>
-                    <br />
-                    <p className="fw-light" style={{marginTop: '5vw'}}>All calls are recorded</p>
+        <div style={{ width: '100%', height: '100%' }}>
+            <div className="row align-items-center g-lg-5 py-5 rounded containerBg">
+                <div className="col-lg-7 text-center text-lg-start bg-body rounded" style={{ marginLeft: '10vw', height: '54vw', width: '83vw', boxShadow: 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}>
+                    <div style={{ marginLeft: '5vw', marginTop: '5vw' }}>
+                        <h3 className="fw-bold" style={{ color: '#0dcaf0' }}>Contact Us</h3>
+                        <h4 className="fw-bold" style={{ color: '#0dcaf0' }}>Customer services</h4><br />
+                        <p className="fw-normal">Monday - Friday: 9:00am - 4:00pm</p><br />
+                        <h4 className="fw-bold" style={{ color: '#0dcaf0' }}>Pharma Ease online doctor</h4><br />
+                        <p className="fw-normal">Call: 020 7989 9888 (call charges may apply)</p>
+                        <p className="fw-normal">Email: pharmaease@gmail.com</p>
+                        <br />
+                        <p className="fw-normal" style={{ color: '#0dcaf0' }}>Or fill the following form to send us a message.</p>
+                        <br />
+                        <small className="fw-light" style={{ marginTop: '10vw', color: 'black' }}>All calls are recorded.</small>
+                    </div>
                 </div>
-                <div className="container-sm container-fluid rounded formContainer"  style={{marginLeft: '-5vw'}}>
+
+                <div className="container-sm container-fluid rounded formContainer bg-body" style={{ marginLeft: '-35vw', width: '32vw', height: '50vw', marginTop: '4vw', boxShadow: 'none' }}>
                     <form>
                         <div className="form-group" style={{ width: '25vw' }}>
-                            <input type="text" className="form-control" id="exampleInput" placeholder="Full name" />
+                            <label htmlFor="exampleInputUsername1">Username</label>
+                            <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Full name" />
                         </div><br />
                         <div className="form-group">
-                            <input type="tel" className="form-control" id="exampleInput" placeholder="Telephone" />
+                            <label htmlFor="exampleInputUsername1">Telephone</label>
+                            <input type="tel" className="form-control" id="exampleInputTelephone1" placeholder="Telephone" />
                         </div><br />
                         <div className="form-group">
-                            <input type="email" className="form-control" id="exampleInput" aria-describedby="emailHelp" placeholder="Email" />
+                            <label htmlFor="exampleInputUsername1">Username</label>
+                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
                         </div><br />
                         <div className="form-group">
-                            <input type="text" className="form-control" id="exampleInput" placeholder="Subject" />
+                            <label htmlFor="exampleInputUsername1">Subject</label>
+                            <input type="text" className="form-control" id="exampleInputSubject1" placeholder="Subject" />
                         </div><br />
                         <div className="form-group">
-                            <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Message"></textarea><br/>
+                            <label htmlFor="exampleFormControlTextarea1">Message</label>
+                            <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Message"></textarea><br />
                         </div>
-                        <button type="submit" className="btn btn-primary">Submit</button>
+                        <button type="submit" className="btn btn-info text-white" style={{width: '100%'}}>Submit</button>
                     </form>
                 </div>
             </div>
