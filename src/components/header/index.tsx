@@ -6,8 +6,8 @@ export default function Header() {
       {/* Header component START */}
 
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/">Pharma Ease</a>
+        <div className="container-fluid" style={{fontFamily: "'Quicksand', sans-serif"}}>
+          <a className="navbar-brand" href="/" style={{color: '#006837'}}>Pharma Ease</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -24,8 +24,8 @@ export default function Header() {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/cart">
-                  <span className="position-relative"><Image src="/images/cart2.svg" alt="Shopping Cart" width={27} height={27} />
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-dark">2</span>
+                  <span className="position-relative"><Image src="/images/cart2.svg" alt="Shopping Cart" width={26} height={26} />
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill" style={{backgroundColor: '#006837'}}>2</span>
                   </span>
                 </a>
               </li>

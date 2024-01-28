@@ -2,17 +2,15 @@ import Image from 'next/image'
 
 interface CardComponents {
   title: string;
-  text: string;
   image: string;
 }
 
-const Card: React.FC<CardComponents> = ({ title, text, image }) => {
+const Card: React.FC<CardComponents> = ({ title, image }) => {
   return (
     <div className="col-lg-4">
       <Image src={image} alt="..." width={140} height={140} className="bd-placeholder-img rounded-circle"/>
-      <h2 className="fw-normal">{title}</h2>
-      <p>{text}</p>
-      <p><a className="btn btn-secondary" href="#">View details »</a></p>
+      <h4 className="fw-normal" style={{marginTop: '1vw', marginBottom: '2vw'}}>{title}</h4>
+      <p><a className="btn btn-success" href="#">View category »</a></p>
     </div>
   );
 };
