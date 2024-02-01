@@ -7,7 +7,7 @@ export default function Login() {
       <div style={{ width: '100%', height: '100%' }}>
         <div className="row align-items-center g-lg-5 py-5 rounded containerBg">
           <div className="text-center text-lg-start">
-            <div className="container-sm container-fluid rounded formContainer bg-body" style={{ flexDirection: 'row', width: '70vw' }}>
+            <div className="container-sm container-fluid rounded formContainer bg-body" style={{ flexDirection: 'row', width: '70vw', height: '38vw' }}>
 
               <div>
                 <h4 style={{ textAlign: 'center', color: '#0dcaf0' }}>Welcome back!</h4>
