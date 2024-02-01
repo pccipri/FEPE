@@ -20,7 +20,7 @@ export default function Header() {
                 <a className="nav-link" href="/shop">Shop</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">My Account</a>
+                <a className="nav-link" href="/account">My Account</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/cart">
@@ -36,7 +36,7 @@ export default function Header() {
                 <a className="nav-link" href="/login">Log In</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">DB Actions</a>
+                <a className="nav-link" href="/database">DB Actions</a>
               </li>
             </ul>
             <form className="d-flex" role="search">

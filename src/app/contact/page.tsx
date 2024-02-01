@@ -21,7 +21,7 @@ export default function Contact() {
                     <form>
                         <div className="form-group" style={{ width: '25vw' }}>
                             <label htmlFor="exampleInputUsername1">Username</label>
-                            <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Full name" />
+                            <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Username" />
                         </div><br />
                         <div className="form-group">
                             <label htmlFor="exampleInputUsername1">Telephone</label>
