@@ -7,7 +7,7 @@ export default function Header() {
 
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid" style={{fontFamily: "'Quicksand', sans-serif"}}>
-          <a className="navbar-brand" href="/" style={{color: '#006837'}}>Pharma Ease</a>
+          <a className="navbar-brand" href="/" style={{color: '#006837', fontFamily: "'Tangerine', cursive", fontSize: '2.5vw'}}>Pharma Ease</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

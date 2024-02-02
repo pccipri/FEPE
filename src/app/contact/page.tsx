@@ -17,19 +17,11 @@ export default function Contact() {
                     </div>
                 </div>
 
-                <div className="container-sm container-fluid rounded formContainer bg-body" style={{ marginLeft: '-35vw', width: '32vw', height: '50vw', marginTop: '4vw', boxShadow: 'none' }}>
+                <div className="container-sm container-fluid rounded formContainer bg-body" style={{ marginLeft: '-35vw', width: '32vw', marginTop: '-2vw', boxShadow: 'none' }}>
                     <form>
-                        <div className="form-group" style={{ width: '25vw' }}>
-                            <label htmlFor="exampleInputUsername1">Username</label>
-                            <input type="text" className="form-control" id="exampleInputUsername1" placeholder="Username" />
-                        </div><br />
                         <div className="form-group">
-                            <label htmlFor="exampleInputUsername1">Telephone</label>
-                            <input type="tel" className="form-control" id="exampleInputTelephone1" placeholder="Telephone" />
-                        </div><br />
-                        <div className="form-group">
-                            <label htmlFor="exampleInputUsername1">Username</label>
-                            <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" />
+                            <label htmlFor="exampleInputUsername1" style={{ width: '25vw' }}>Phone number</label>
+                            <input type="tel" className="form-control" id="exampleInputTelephone1" placeholder="Phone number" />
                         </div><br />
                         <div className="form-group">
                             <label htmlFor="exampleInputUsername1">Subject</label>

@@ -5,7 +5,7 @@ export default function Products() {
         <div className='mx-auto' style={{ width: '90vw' }}>
             <div className='d-flex justify-content-between align-items-center' style={{ margin: '3vw auto 2vw auto' }}>
                 <h5 style={{ color: '#006837' }}>Products</h5>
-                <button type="button" id="submit" name="submit" className="btn btn-primary">Add Products</button>
+                <a href="create-product"><button type="button" id="submit" name="submit" className="btn btn-primary">Add Product</button></a>
             </div>
 
             <div className="row align-items-center">
@@ -31,7 +31,7 @@ export default function Products() {
                                 <td className="align-middle"><Image src="/images/placeholder.jpg" width={100} height={70} alt="Product" /></td>
                                 <td className="align-middle">Product price</td>
                                 <td className="align-middle">
-                                    <button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button>
+                                    <a href="/edit-product"><button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button></a>
                                     <button type="button" id="submit" name="submit" className="btn btn-danger">Delete</button>
                                 </td>
                             </tr>
@@ -43,7 +43,7 @@ export default function Products() {
                                 <td className="align-middle"><Image src="/images/placeholder.jpg" width={100} height={70} alt="Product" /></td>
                                 <td className="align-middle">Product price</td>
                                 <td className="align-middle">
-                                    <button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button>
+                                    <a href="/edit-product"><button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button></a>
                                     <button type="button" id="submit" name="submit" className="btn btn-danger">Delete</button>
                                 </td>
                             </tr>

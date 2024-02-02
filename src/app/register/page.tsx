@@ -14,11 +14,11 @@ export default function Register() {
                 <form style={{ color: 'black' }}>
                   <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" />
                   </div><br />
                   <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Username</label>
-                    <input type="text" className="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" placeholder="Enter username" />
+                    <input type="text" className="form-control" id="exampleInputUsername1" aria-describedby="emailHelp" placeholder="Username" />
                   </div><br />
                   <div className="form-group">
                     <label htmlFor="exampleInputPassword1">Password</label>
