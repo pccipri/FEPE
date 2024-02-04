@@ -1,13 +1,15 @@
 import Image from 'next/image'
+import { useEffect } from 'react';
 
 export default function Header() {
+
   return (
     <main>
       {/* Header component START */}
 
       <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid" style={{fontFamily: "'Quicksand', sans-serif"}}>
-          <a className="navbar-brand" href="/" style={{color: '#006837', fontFamily: "'Tangerine', cursive", fontSize: '2.5vw'}}>Pharma Ease</a>
+        <div className="container-fluid" style={{ fontFamily: "'Quicksand', sans-serif" }}>
+          <a className="navbar-brand" href="/" style={{ color: '#006837', fontFamily: "'Tangerine', cursive", fontSize: '2.5vw' }}>Pharma Ease</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -25,7 +27,7 @@ export default function Header() {
               <li className="nav-item">
                 <a className="nav-link" href="/cart">
                   <span className="position-relative"><Image src="/images/cart2.svg" alt="Shopping Cart" width={26} height={26} />
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill" style={{backgroundColor: '#006837'}}>2</span>
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill" style={{ backgroundColor: '#006837' }}>2</span>
                   </span>
                 </a>
               </li>

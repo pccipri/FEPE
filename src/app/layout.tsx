@@ -1,6 +1,5 @@
 'use client'
 
-import { Providers } from "./GlobalRedux/provider";
 
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -8,6 +7,7 @@ import './globals.css'
 import { useEffect } from 'react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import { Providers } from '@/GlobalRedux/provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,18 +23,18 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <head>
-        <title>Pharma Ease</title>
-      </head>
-      <body className={inter.className}>
-        <Header />
-        <main style={{minHeight: '70vh'}}>
-          <Providers>
+      <Providers>
+        <head>
+          <title>Pharma Ease</title>
+        </head>
+        <body className={inter.className}>
+          <Header />
+          <main style={{ minHeight: '70vh' }}>
             {children}
-          </Providers>
-        </main>
-        <Footer />
-      </body>
+          </main>
+          <Footer />
+        </body>
+      </Providers>
     </html>
   )
 }

@@ -1,12 +1,12 @@
 import { UserType } from "./userType";
 
 export type User = {
-    id?: Number;
+    id?: number;
     type: UserType
-    first_name: String;
-    last_name: String;
-    username: String;
-    email: String;
-    password: String;
-    phone_number: String;
+    first_name: string;
+    last_name: string;
+    username: string;
+    email: string;
+    password: string;
+    phone_number: string;
 }

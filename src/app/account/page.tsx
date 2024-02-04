@@ -1,16 +1,11 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import PersonalDetails from './components/PersonalDetails'
 import YourOrders from './components/YourOrders'
 
 export default function Account() {
- const [selectedTab, setSelectedTab] = useState<'personalDetails' | 'yourOrders'>('personalDetails');
-
- useEffect(() => {
-    console.log(selectedTab);
-    
- }, [selectedTab])
+    const [selectedTab, setSelectedTab] = useState<'personalDetails' | 'yourOrders'>('personalDetails');
 
     return (
         <div style={{ width: '100%', height: '100%' }}>
@@ -25,12 +20,12 @@ export default function Account() {
                                             <div className="user-profile">
                                                 <h4 className="user-name text-info">Full Name</h4>
                                             </div>
-                                            <div className="about" style={{marginTop: '2vw'}}>
+                                            <div className="about" style={{ marginTop: '2vw' }}>
                                                 <ul className="list-group list-group-flush flex-column">
-                                                    <button className="list-group-item list-group-item-action border-top" onClick={(e) => {setSelectedTab('personalDetails')}}>
+                                                    <button className="list-group-item list-group-item-action border-top" onClick={(e) => { setSelectedTab('personalDetails') }}>
                                                         <a className="nav-link text-dark active" aria-current="page" href="#">Account details</a>
                                                     </button>
-                                                    <button className="list-group-item list-group-item-action border-bottom" onClick={(e) => {setSelectedTab('yourOrders')}}>
+                                                    <button className="list-group-item list-group-item-action border-bottom" onClick={(e) => { setSelectedTab('yourOrders') }}>
                                                         <a className="nav-link text-dark" href="#">Your orders</a>
                                                     </button>
                                                 </ul>
@@ -41,8 +36,8 @@ export default function Account() {
                             </div>
                             <div className="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                                 <div className="card h-100">
-                                    <PersonalDetails currentTab={selectedTab}/>
-                                    <YourOrders currentTab={selectedTab}/>
+                                    <PersonalDetails currentTab={selectedTab} />
+                                    <YourOrders currentTab={selectedTab} />
                                 </div>
                             </div>
                         </div>

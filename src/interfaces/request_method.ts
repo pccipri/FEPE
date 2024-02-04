@@ -1,0 +1,1 @@
+export type RequestMethod = "GET" | "GET_BY_ID" | "POST" | "PUT" | "DELETE"

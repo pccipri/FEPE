@@ -1,7 +1,7 @@
 import { User } from "./user";
 
 export type Message = {
-    id?: Number;
+    id?: number;
     user_id: User;
-    message: String;
+    message: string;
 }

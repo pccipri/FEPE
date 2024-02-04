@@ -10,18 +10,18 @@ export default function Cart() {
 
     return (
         <main>
-            <button 
+            <button
                 className="btn btn-primary"
                 onClick={() => dispatch(increment())}
             > Increment
             </button>
             <span>{count}</span>
-            <button 
+            <button
                 className="btn btn-primary"
                 onClick={() => dispatch(decrement())}
             > Decrement
             </button>
-            <button 
+            <button
                 className="btn btn-primary"
                 onClick={() => dispatch(incrementByAmount(2))}
             > Increment by 2
