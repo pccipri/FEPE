@@ -1,4 +1,6 @@
-"use client"
+'use client'
+
+import { Providers } from "./GlobalRedux/provider";
 
 import { Inter } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.css'
@@ -27,7 +29,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <main style={{minHeight: '70vh'}}>
-          {children}
+          <Providers>
+            {children}
+          </Providers>
         </main>
         <Footer />
       </body>
