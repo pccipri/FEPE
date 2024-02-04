@@ -3,7 +3,7 @@ export default function Users() {
         <div className='mx-auto' style={{ width: '90vw' }}>
             <div className='d-flex justify-content-between align-items-center' style={{ margin: '3vw auto 2vw auto' }}>
                 <h5 style={{ color: '#006837' }}>Users</h5>
-                <button type="button" id="submit" name="submit" className="btn btn-primary">Add Users</button>
+                <a href="/create-user"><button type="button" id="submit" name="submit" className="btn btn-primary">Add User</button></a>
             </div>
 
             <div className="row align-items-center">
@@ -15,7 +15,6 @@ export default function Users() {
                                 <th scope="col" style={{ color: '#006837' }}>Type</th>
                                 <th scope="col" style={{ color: '#006837' }}>Username</th>
                                 <th scope="col" style={{ color: '#006837' }}>Email</th>
-                                <th scope="col" style={{ color: '#006837' }}>Password</th>
                                 <th scope="col" style={{ color: '#006837' }}>Actions</th>
                             </tr>
                         </thead>
@@ -25,9 +24,8 @@ export default function Users() {
                                 <td className="align-middle">Type</td>
                                 <td className="align-middle">Username</td>
                                 <td className="align-middle">Email</td>
-                                <td className="align-middle">Password</td>
                                 <td className="align-middle">
-                                    <button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button>
+                                    <a href="/edit-user"><button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button></a>
                                     <button type="button" id="submit" name="submit" className="btn btn-danger">Delete</button>
                                 </td>
                             </tr>

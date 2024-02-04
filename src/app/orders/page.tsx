@@ -3,7 +3,6 @@ export default function Orders() {
         <div className='mx-auto' style={{ width: '90vw' }}>
             <div className='d-flex justify-content-between align-items-center' style={{ margin: '3vw auto 2vw auto' }}>
                 <h5 style={{ color: '#006837' }}>Orders</h5>
-                <button type="button" id="submit" name="submit" className="btn btn-primary">Add Orders</button>
             </div>
 
             <div className="row align-items-center">
@@ -25,8 +24,7 @@ export default function Orders() {
                                 <td className="align-middle">Total Price</td>
                                 <td className="align-middle">Time</td>
                                 <td className="align-middle">
-                                    <button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button>
-                                    <button type="button" id="submit" name="submit" className="btn btn-danger">Delete</button>
+                                    <button type="button" id="submit" name="submit" className="btn btn-danger">Cancel Order</button>
                                 </td>
                             </tr>
                         </tbody>

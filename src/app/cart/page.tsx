@@ -55,28 +55,20 @@ export default function Cart() {
                                 </div>
                             </div>
                             <hr className="featurette-divider" style={{ width: '47vw', marginLeft: '3vw' }} />
-                            <div className="back-to-shop" style={{ marginLeft: '3vw', marginBottom: '2vw' }}><a href="#"><Image src="/images/arrow-left.svg" alt="Back" width={20} height={20} /></a><span className="text-muted"> Back to shop</span></div>
+                            <div className="back-to-shop" style={{ marginLeft: '3vw', marginBottom: '2vw' }}><a href="/shop" className="text-decoration-none"><Image src="/images/arrow-left.svg" alt="Back" width={20} height={20} /><span className="text-muted"> Back to shop</span></a></div>
                         </div>
                         <div className="col-md-4 summary">
                             <div className="col" style={{ marginTop: '3vw', marginBottom: '2vw' }}><h4 className='text-info'><b>Summary</b></h4></div>
                             <hr className="featurette-divider" style={{ width: '22vw' }} />
                             <div className="row">
                                 <div className="col">3 ITEMS</div>
-                                <div className="col text-right" style={{ color: '#006837' }}>94.50 RON</div>
                             </div>
                             <br />
-                            <form>
-                                <p>Shipping</p>
-                                <select className="form-select" style={{ width: '22vw' }}><option className="text-muted">Standard - 5 RON</option></select>
-                                <br /><p>Promotional code</p>
-                                <input id="code" className="form-control" style={{ width: '22vw' }} placeholder="Enter your code" />
-                            </form>
-                            <hr className="featurette-divider" style={{ width: '22vw' }} />
                             <div className="row">
                                 <div className="col">TOTAL PRICE</div>
                                 <div className="col text-right" style={{ color: '#006837' }}>99.50 RON</div>
                             </div>
-                            <br /><button type="submit" className="btn btn-success">Checkout</button><br /><br />
+                            <br /><button type="submit" className="btn btn-success" style={{marginTop: '9vw'}}>Checkout</button><br /><br />
                         </div>
                     </div>
                 </div>

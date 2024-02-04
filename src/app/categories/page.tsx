@@ -3,7 +3,7 @@ export default function Categories() {
         <div className='mx-auto' style={{ width: '90vw' }}>
             <div className='d-flex justify-content-between align-items-center' style={{ margin: '3vw auto 2vw auto' }}>
                 <h5 style={{ color: '#006837' }}>Categories</h5>
-                <button type="button" id="submit" name="submit" className="btn btn-primary">Add Categories</button>
+                <a href="/create-category"><button type="button" id="submit" name="submit" className="btn btn-primary">Add Category</button></a>
             </div>
 
             <div className="row align-items-center">
@@ -21,7 +21,7 @@ export default function Categories() {
                                 <th className="align-middle" scope="row">1</th>
                                 <td className="align-middle">Name</td>
                                 <td className="align-middle">
-                                    <button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button>
+                                    <a href="/edit-category"><button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button></a>
                                     <button type="button" id="submit" name="submit" className="btn btn-danger">Delete</button>
                                 </td>
                             </tr>

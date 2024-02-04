@@ -21,10 +21,6 @@ export default function EditUser() {
                                         <label htmlFor="exampleInputEmail1">Email</label>
                                         <input type="email" className="form-control" id="Email" placeholder="Email" />
                                     </div><br />
-                                    <div className="form-group">
-                                        <label htmlFor="exampleInputEmail1">Password</label>
-                                        <input type="text" className="form-control" id="Password" placeholder="Password" />
-                                    </div><br />
                                     <button type="submit" className="btn btn-info text-white" style={{ width: '100%', marginTop: '5vw'}}>Ok</button><br /><br />
                                 </form>
                             </div>

@@ -14,20 +14,20 @@ export default function Home() {
         </div>
         <div className="carousel-item active" style={{ height: '85vh' }}>
           <Image src="/images/slider1.jpg" className="d-block w-100" alt="..." width={1080} height={600} style={{ width: '100%', height: '100%', objectFit: "none" }} />
-          <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-3.85vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
+          <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
             <h5 style={{color: 'white', marginBottom: '0'}}>Skin Functional pigmentation skincare set for sensitive skin</h5>
           </div>
         </div>
         <div className="carousel-inner" style={{ height: '85vh' }}>
           <div className="carousel-item" data-bs-interval="10000" style={{ height: '85vh' }}>
             <Image src="/images/slider2.jpg" className="d-block w-100" alt="..." width={1080} height={600} style={{ width: '100%', height: '100%', objectFit: "none" }} />
-            <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-3.85vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
+            <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
               <h5 style={{color: 'white', marginBottom: '0'}}>Omega-3 fish oil concentrate with vitamin E</h5>
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="2000" style={{ height: '85vh' }}>
             <Image src="/images/slider3.jpg" className="d-block w-100" alt="..." width={1080} height={600} style={{ width: '100%', height: '100%', objectFit: "none" }} />
-            <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-3.85vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
+            <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
               <h5 style={{color: 'white', marginBottom: '0'}}>Multivitamin and multimineral concentrate</h5>
             </div>
           </div>
