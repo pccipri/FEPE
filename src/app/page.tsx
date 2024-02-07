@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Card from '@/components/card'
-import Product from '@/components/product'
+import Prod from '@/components/product'
 
 export default function Home() {
   return (
@@ -104,9 +104,9 @@ export default function Home() {
 
                         <div className="card-deck cardContainer">
                           <div className="row" style={{ gap: '2vw' }}>
-                            <Product name="Robitussin Dry Cough Forte medicine" price="28,90" image="/images/robitussin.jpg" />
-                            <Product name="Sudafed decongestant tablets (12 Tablets)" price="27,90" image="/images/sudafed.jpg" />
-                            <Product name="Actifed multi-action tablets (12 tablets)" price="30,90" image="/images/actifed.jpg" />
+                            <Prod name="Robitussin Dry Cough Forte medicine" price="28,90" image="/images/robitussin.jpg" description="Provides symptomatic relief of dry, irritating and hacking coughs for up to 8 hours in adults and children."/>
+                            <Prod name="Sudafed decongestant tablets (12 Tablets)" price="27,90" image="/images/sudafed.jpg" description="With pseudoephedrine hydrochloride, which offers highly effective relief for nose and sinus congestion."/>
+                            <Prod name="Actifed multi-action tablets (12 tablets)" price="30,90" image="/images/actifed.jpg" description="Unblocks sinuses, dries runny noses, unblocks stuffy noses and clears catarrh."/>
                           </div>
                         </div>
 
@@ -118,9 +118,9 @@ export default function Home() {
 
                         <div className="card-deck cardContainer">
                           <div className="row" style={{ gap: '2vw' }}>
-                            <Product name="Night Nurse Capsules (10 Capsules)" price="43,90" image="/images/night-nurse.jpg" />
-                            <Product name="Strefen Intensive (16 lozenges)" price="27,90" image="/images/strefen.jpg" />
-                            <Product name="Actifed multi-action dry coughs (100ml)" price="34,90" image="/images/actifed-cough.jpg" />
+                            <Prod name="Night Nurse Capsules (10 Capsules)" price="43,90" image="/images/night-nurse.jpg" description="Relieve tickly coughs, shivers, aches and pains, runny noses, sore throats and headaches and so aids restful sleep."/>
+                            <Prod name="Strefen Intensive (16 lozenges)" price="27,90" image="/images/strefen.jpg" description="Provides effective relief from sore throat pain. Works for up to 3 hours and contains the anti-inflammatory, Flurbiprofen."/>
+                            <Prod name="Actifed multi-action dry coughs (100ml)" price="34,90" image="/images/actifed-cough.jpg" description="Relieves irritating dry coughs and other symptoms such as runny nose, nasal congestion and catarrh."/>
                           </div>
                         </div>
 
@@ -132,9 +132,9 @@ export default function Home() {
 
                         <div className="card-deck cardContainer">
                           <div className="row" style={{ gap: '2vw' }}>
-                            <Product name="Covonia throat spray (30ml)" price="40,90" image="/images/covonia.jpg" />
-                            <Product name="Nytol Original (20 caplets)" price="27,90" image="/images/nytol.jpg" />
-                            <Product name="Benylin Chesty Coughs (30ml)" price="33,90" image="/images/benylin.jpg" />
+                            <Prod name="Covonia throat spray (30ml)" price="40,90" image="/images/covonia.jpg" description="Relieves the symptoms of painful, irritated sore throats. Numbs pain and fights infection."/>
+                            <Prod name="Nytol Original (20 caplets)" price="27,90" image="/images/nytol.jpg" description="Contains the active ingredients Diphenhydramine to help induce sleep in those experiencing temporary insomnia."/>
+                            <Prod name="Benylin Chesty Coughs (30ml)" price="33,90" image="/images/benylin.jpg" description="Works deep down in the chest to help loosen phlegm, helping clear bronchial congestion."/>
                           </div>
                         </div>
 

@@ -3,6 +3,7 @@
 import { Category } from "@/interfaces/category"
 import categoryRequestHandler from "@/services/categoryService";
 import { useState } from "react"
+import Image from 'next/image'
 
 export default function CreateCategory() {
     const [newCategory, setNewCategory] = useState<Category>({
@@ -33,6 +34,7 @@ export default function CreateCategory() {
                                         <input name="name" onChange={handleInputChange} type="text" className="form-control" id="Name" placeholder="Name" value={newCategory.name} />
                                     </div><br />
                                     <button onClick={() => createCategory()} className="btn btn-info text-white" style={{ width: '100%', marginTop: '5vw' }}>Create</button><br /><br />
+                                    <div><a href="/categories" className="text-decoration-none"><Image src="/images/arrow-left.svg" alt="Back" width={20} height={20} /><span className="text-muted"> Back to categories</span></a></div>
                                 </form>
                             </div>
                         </div>

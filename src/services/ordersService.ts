@@ -1,72 +1,72 @@
-import { Product } from '@/interfaces/product';
+import { Order } from '@/interfaces/order';
 import { RequestMethod } from '@/interfaces/request_method';
 import { API_BASE_URL, API_ROUTES } from '@/utils/routes';
 
-export default async function productRequestHandler(requestMethod: RequestMethod, id?: string, updatedProduct?: Product) {
+export default async function orderRequestHandler(requestMethod: RequestMethod, id?: string, updatedOrder?: Order) {
 
   switch(requestMethod) { 
     case "GET": { 
         try {
-            const response = await fetch(API_BASE_URL + API_ROUTES.PRODUCTS);
+            const response = await fetch(API_BASE_URL + API_ROUTES.ORDERS);
             const data = await response.json();
             return data
           } catch (error) {
-            console.error('Error fetching products:', error);
+            console.error('Error fetching orders:', error);
           }
        break; 
     } 
     case "GET_BY_ID": { 
         try {
-            const response = await fetch(`${API_BASE_URL + API_ROUTES.PRODUCTS}/${id}`);
+            const response = await fetch(`${API_BASE_URL + API_ROUTES.ORDERS}/${id}`);
             const data = await response.json();
             return data
           } catch (error) {
-            console.error(`Error fetching product with ID ${id}:`, error);
+            console.error(`Error fetching order with ID ${id}:`, error);
           }
        break; 
     }
     case "POST": { 
         try {
-            const response = await fetch(API_BASE_URL + API_ROUTES.PRODUCTS, {
+            const response = await fetch(API_BASE_URL + API_ROUTES.ORDERS, {
               method: 'POST',
               headers: {    
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify(updatedProduct),
+              body: JSON.stringify(updatedOrder),
             });
             const data = await response.json();
             return data
           } catch (error) {
-            console.error('Error creating product:', error);
+            console.error('Error creating order:', error);
           }
         break; 
      }
      case "PUT": { 
         try {
-          console.log(updatedProduct);
+          console.log(updatedOrder);
           
-            const response = await fetch(`${API_BASE_URL + API_ROUTES.PRODUCTS}/${id}`, {
+            const response = await fetch(`${API_BASE_URL + API_ROUTES.ORDERS}/${id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify(updatedProduct),
+              body: JSON.stringify(updatedOrder),
             });
             const data = await response.json();
             return data
           } catch (error) {
-            console.error(`Error replacing product with ID ${id}:`, error);
+            console.error(`Error replacing order with ID ${id}:`, error);
           }
         break; 
      }
      case "DELETE": { 
         try {
-            await fetch(`${API_BASE_URL + API_ROUTES.PRODUCTS}/${id}`, {
+            await fetch(`${API_BASE_URL + API_ROUTES.ORDERS}/${id}`, {
               method: 'DELETE',
             });
-            return "Product deleted successfully";
+            return "Order deleted successfully";
           } catch (error) {
-            console.error(`Error deleting product with ID ${id}:`, error);
+            console.error(`Error deleting order with ID ${id}:`, error);
           }
         break; 
      }      
