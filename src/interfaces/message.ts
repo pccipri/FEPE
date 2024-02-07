@@ -1,7 +1,8 @@
+import { RequestDTO } from "./requestDTO";
 import { User } from "./user";
 
-export type Message = {
+export type Message<T = User | RequestDTO> = {
     id?: number;
-    user_id: User;
+    user_id: T;
     message: string;
 }

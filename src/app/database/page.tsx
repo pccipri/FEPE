@@ -12,7 +12,6 @@ export default function Database() {
                     <a href="/products"><button type="button" className="btn btn-success btn-lg px-4 me-sm-3">Products</button></a>
                     <a href="/categories"><button type="button" className="btn btn-success btn-lg px-4 me-sm-3">Categories</button></a>
                     <a href="/orders"><button type="button" className="btn btn-success btn-lg px-4 me-sm-3">Orders</button></a>
-                    <a href="/order-products"><button type="button" className="btn btn-success btn-lg px-4 me-sm-3" style={{width: '17vw'}}>Order Products</button></a>
                     <a href="/messages"><button type="button" className="btn btn-success btn-lg px-4 me-sm-3">Messages</button></a>
                 </div>
             </div>

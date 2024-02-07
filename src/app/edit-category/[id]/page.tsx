@@ -4,6 +4,7 @@ import { Category } from "@/interfaces/category";
 import categoryRequestHandler from "@/services/categoryService";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
+import Image from 'next/image'
 
 export default function EditCategory({ params }: { params: { id: string } }) {
     const [toEditCategory, setToEditCategory] = useState<Category>({
@@ -47,6 +48,7 @@ export default function EditCategory({ params }: { params: { id: string } }) {
                                         <input value={toEditCategory.name} name="name" onChange={handleInputChange} type="text" className="form-control" id="Name" placeholder="Name" />
                                     </div><br />
                                     <button onClick={() => updateCategory()} className="btn btn-info text-white" style={{ width: '100%', marginTop: '5vw' }}>Ok</button><br /><br />
+                                    <div><a href="/categories" className="text-decoration-none"><Image src="/images/arrow-left.svg" alt="Back" width={20} height={20} /><span className="text-muted"> Back to categories</span></a></div>
                                 </form>
                             </div>
                         </div>

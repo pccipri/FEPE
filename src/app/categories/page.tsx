@@ -48,7 +48,7 @@ export default function Categories() {
                                 <td className="align-middle">{category.name}</td>
                                 <td className="align-middle">
                                     <a href={`/edit-category/${category.id}`}><button type="button" id="submit" name="submit" className="btn btn-success" style={{ marginRight: '1vw' }}>Update</button></a>
-                                    <button type="button" onClick={() => setSelectedCategory(category.id)} name="submit" data-bs-toggle="modal" data-bs-target="#myModal" className="btn btn-danger">Delete</button>
+                                    <button type="button" onClick={() => setSelectedCategory(category.id)} name="submit" data-bs-toggle="modal" data-bs-target="#modalCategory" className="btn btn-danger">Delete</button>
                                 </td>
                             </tr>)}
                         </tbody>
@@ -60,18 +60,18 @@ export default function Categories() {
                 className="modal modal-alert bg-secondary py-5"
                 tabIndex={-1}
                 role="dialog"
-                id="myModal"
+                id="modalCategory"
             >
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Delete category</h5>
                             <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            <p>Are you sure you want to delete this Category?</p>
+                            <p>Are you sure you want to delete this category?</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>

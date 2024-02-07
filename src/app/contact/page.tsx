@@ -1,4 +1,26 @@
+"use client"
+
+import { Message } from "@/interfaces/message"
+import messageRequestHandler from "@/services/messagesService";
+import { useState } from "react"
+
 export default function Contact() {
+    const [newMessage, setNewMessage] = useState<Message>({
+        user_id: {
+            id: 1
+        },
+        message: ''
+    })
+
+    const handleInputChange = (event: { target: { name: string; value: any }; }) => {
+        const { name, value } = event.target;
+        setNewMessage({ ...newMessage, [name]: value });
+    };
+
+    const createMessage = async () => {
+        const response = await messageRequestHandler("POST", undefined, newMessage);
+    }
+
     return (
         <div style={{ width: '100%', height: '100%' }}>
             <div className="row align-items-center g-lg-5 py-5 rounded containerBg">
@@ -18,20 +40,20 @@ export default function Contact() {
                 </div>
 
                 <div className="container-sm container-fluid rounded formContainer bg-body" style={{ marginLeft: '-35vw', width: '32vw', marginTop: '-2vw', boxShadow: 'none' }}>
-                    <form>
+                    <form onSubmit={(e) => e.preventDefault()}>
                         <div className="form-group">
-                            <label htmlFor="exampleInputUsername1" style={{ width: '25vw' }}>Phone number</label>
-                            <input type="tel" className="form-control" id="exampleInputTelephone1" placeholder="Phone number" />
+                            <label htmlFor="phone_number" style={{ width: '25vw' }}>Phone number</label>
+                            <input name="phone_number" type="tel" className="form-control" id="phone_number" placeholder="Phone number" />
                         </div><br />
                         <div className="form-group">
-                            <label htmlFor="exampleInputUsername1">Subject</label>
-                            <input type="text" className="form-control" id="exampleInputSubject1" placeholder="Subject" />
+                            <label htmlFor="subject">Subject</label>
+                            <input type="text" name="subject" className="form-control" id="subject" placeholder="Subject" />
                         </div><br />
                         <div className="form-group">
-                            <label htmlFor="exampleFormControlTextarea1">Message</label>
-                            <textarea className="form-control" id="exampleFormControlTextarea1" placeholder="Message"></textarea><br />
+                            <label htmlFor="message">Message</label>
+                            <textarea name="message" onChange={handleInputChange} value={newMessage.message} className="form-control" id="message" placeholder="Message"></textarea><br />
                         </div>
-                        <button type="submit" className="btn btn-info text-white" style={{width: '100%'}}>Submit</button>
+                        <button onClick={() => createMessage()} className="btn btn-info text-white" style={{ width: '100%' }}>Submit</button>
                     </form>
                 </div>
             </div>

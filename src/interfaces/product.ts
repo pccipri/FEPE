@@ -1,8 +1,9 @@
 import { Category } from "./category";
+import { RequestDTO } from "./requestDTO";
 
-export type Product = {
+export type Product<T = Category | RequestDTO> = {
     id?: number;
-    category_id: Category;
+    category_id: T;
     name: string;
     description: string;
     image: string;

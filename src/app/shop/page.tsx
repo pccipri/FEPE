@@ -1,7 +1,25 @@
-import Product from '@/components/product'
+'use client'
+
+import Prod from "@/components/product";
+import { Product } from "@/interfaces/product";
+import productRequestHandler from "@/services/productsService";
+import { useEffect, useState } from "react";
 
 
 export default function Shop() {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [selectedProduct, setSelectedProduct] = useState<number>();
+
+  const getAllProducts = async () => {
+      const response: Product[] = await productRequestHandler("GET");
+
+      setProducts(response);
+  }
+
+  useEffect(() => {
+      getAllProducts();
+  }, [])
+
   return (
     <>
       <div className='container' style={{ marginTop: '5vw', marginBottom: '5vw' }}>
@@ -11,27 +29,12 @@ export default function Shop() {
 
         <div className="card-deck cardContainer" style={{marginTop: '4vw'}}>
           <div className="row" style={{ gap: '2vw' }}>
-            <Product name="Panadol Advance 500mg Paracetamol tablets and some more text to test something" price="15" image="/images/panadol.jpg" />
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
+            {products.map((product: Product, index: number) => <div key={index} className="" style={{ width: '25vw' }}>
+              <Prod name={product.name} price={product.price.toString()} image={product.image} description={product.description} />
+            </div>)}
           </div>
         </div>
 
-        <div className="card-deck cardContainer">
-          <div className="row" style={{ gap: '2vw' }}>
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
-          </div>
-        </div>
-
-        <div className="card-deck cardContainer">
-          <div className="row" style={{ gap: '2vw' }}>
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
-            <Product name="Panadol advance pain relief (16 tablets)" price="15" image="/images/placeholder.jpg" />
-          </div>
-        </div>
       </div>
     </>
   )
