@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+'use client'
+
 import Image from 'next/image'
 
 export default function Login() {
@@ -12,7 +14,7 @@ export default function Login() {
               <div>
                 <h4 style={{ textAlign: 'center', color: '#0dcaf0' }}>Welcome back!</h4>
                 <p style={{ textAlign: 'center', color: '#0dcaf0' }}>Log In to your account</p>
-                <form style={{ color: 'black' }}>
+                <form style={{ color: 'black' }} onSubmit={(e) => e.preventDefault()}>
                   <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" />

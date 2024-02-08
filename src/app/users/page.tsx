@@ -31,7 +31,7 @@ export default function Users() {
             </div>
 
             <div className="row align-items-center">
-                <div className="text-center">
+                <div className="text-start">
                     <table className="table table-hover mx-auto border" style={{ width: '100%' }}>
                         <thead>
                             <tr>
@@ -70,13 +70,13 @@ export default function Users() {
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Delete category</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Delete user</h5>
                             <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div className="modal-body">
-                            <p>Are you sure you want to delete this category?</p>
+                            <p>Are you sure you want to delete this user?</p>
                         </div>
                         <div className="modal-footer">
                             <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>

@@ -2,6 +2,8 @@
 
 import { Product } from "@/interfaces/product";
 import { RequestDTO } from "@/interfaces/requestDTO";
+import { Category } from "@/interfaces/category";
+import categoryRequestHandler from "@/services/categoryService";
 import productRequestHandler from "@/services/productsService";
 import { redirect } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -18,7 +20,7 @@ export default function EditProduct({ params }: { params: { id: string } }) {
 
     const fetchProduct = async () => {
         const response = await productRequestHandler("GET_BY_ID", params.id);
-        setToEditProduct({ ...response, category_id: {id: response.category_id.id} })
+        setToEditProduct({ ...response, category_id: { id: response.category_id.id } })
     }
 
     const handleInputChange = (event: { target: { name: string; value: any }; }) => {
@@ -30,12 +32,11 @@ export default function EditProduct({ params }: { params: { id: string } }) {
 
     const updateProduct = async () => {
         await productRequestHandler("PUT", params.id, toEditProduct);
-
     }
 
     useEffect(() => {
         console.log(toEditProduct);
-        
+
     }, [toEditProduct])
 
     useEffect(() => {
@@ -43,6 +44,26 @@ export default function EditProduct({ params }: { params: { id: string } }) {
             fetchProduct();
         }
     }, [params])
+
+    // Categories
+    const [categories, setCategories] = useState<Category[]>([]);
+    const [selectedCategory, setSelectedCategory] = useState<number>();
+
+    const getAllCategories = async () => {
+        const response: Category[] = await categoryRequestHandler("GET");
+
+        setCategories(response);
+    }
+
+    useEffect(() => {
+        getAllCategories();
+    }, [])
+
+    const handleCategoryChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+        const categoryId = parseInt(event.target.value);
+        setSelectedCategory(categoryId);
+        setToEditProduct({ ...toEditProduct, category_id: { id: categoryId } });
+    };
 
     return (
         <>
@@ -60,7 +81,19 @@ export default function EditProduct({ params }: { params: { id: string } }) {
                                     </div><br />
                                     <div className="form-group">
                                         <label htmlFor="category_id">Category</label>
-                                        <input value={toEditProduct.category_id.name} onChange={handleInputChange} type="text" className="form-control" id="category_id" name="category_id" placeholder="Category" />
+                                        <select
+                                            className="form-select"
+                                            id="category_id"
+                                            aria-label="Default select example"
+                                            value={selectedCategory}
+                                            onChange={handleCategoryChange}
+                                        >
+                                            {categories.map((category: Category, index: number) => (
+                                                <option key={index} value={category.id}>
+                                                    {category.name}
+                                                </option>
+                                            ))}
+                                        </select>
                                     </div><br />
                                     <div className="form-group">
                                         <label htmlFor="description">Description</label>

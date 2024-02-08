@@ -6,10 +6,9 @@ import { useState } from "react"
 
 export default function CreateUser() {
     const [newUser, setNewUser] = useState<User>({
-        role: {name: ''},
+        role: '',
         first_name: '',
         last_name: '',
-        username: '',
         email: '',
         password: '',
         phone_number: ''
@@ -36,7 +35,7 @@ export default function CreateUser() {
                                 <form style={{ color: 'black', width: '30vw' }} >
                                     <div className="form-group">
                                         <label htmlFor="role">Role</label>
-                                        <input name="role" onChange={handleInputChange} value={newUser.role.name} type="text" className="form-control" id="role" placeholder="Role" />
+                                        <input name="role" onChange={handleInputChange} value={newUser.role} type="text" className="form-control" id="role" placeholder="Role" />
                                     </div><br />
                                     <div className="form-group">
                                         <label htmlFor="first_name">First Name</label>
@@ -45,10 +44,6 @@ export default function CreateUser() {
                                     <div className="form-group">
                                         <label htmlFor="last_name">Last Name</label>
                                         <input name="last_name" onChange={handleInputChange} value={newUser.last_name} type="text" className="form-control" id="last_name" placeholder="Last Name" />
-                                    </div><br />
-                                    <div className="form-group">
-                                        <label htmlFor="last_name">Username</label>
-                                        <input name="username" onChange={handleInputChange} value={newUser.username} type="text" className="form-control" id="username" placeholder="Username" />
                                     </div><br />
                                     <div className="form-group">
                                         <label htmlFor="email">Email</label>
