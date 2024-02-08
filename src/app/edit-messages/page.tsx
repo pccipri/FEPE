@@ -1,5 +1,3 @@
-'use client'
-
 export default function EditMessage() {
     return (
         <>
@@ -10,7 +8,7 @@ export default function EditMessage() {
                             <div>
                                 <h4 style={{ textAlign: 'center', color: '#0dcaf0' }}>Edit messages</h4>
                                 <br/>
-                                <form style={{ color: 'black', width: '30vw' }} onSubmit={(e) => e.preventDefault()}>
+                                <form style={{ color: 'black', width: '30vw' }} >
                                 <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">User Id</label>
                                         <input type="number" className="form-control" id="UserId" placeholder="UserId" min="0"/>

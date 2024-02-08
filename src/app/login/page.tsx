@@ -1,9 +1,40 @@
-/* eslint-disable react/no-unescaped-entities */
-'use client'
+"use client"
 
+import { useAuth } from '@/contexts/AuthContext';
+/* eslint-disable react/no-unescaped-entities */
+import { LoginRequest } from '@/interfaces/loginRequest';
+import { loginUser } from '@/services/authService';
 import Image from 'next/image'
+import { useState } from 'react';
 
 export default function Login() {
+  const [loginUserInfo, setLoginUserInfo] = useState<LoginRequest>({
+    email: "",
+    password: ""
+  })
+  const { initializeStorage } = useAuth();
+
+  const handleInputChange = (event: { target: { name: string; value: any }; }) => {
+    const { name, value } = event.target;
+    setLoginUserInfo({ ...loginUserInfo, [name]: value });
+  };
+
+  const login = async () => {
+    try {
+      const response = await loginUser(loginUserInfo);
+      if (response['token']) {
+        initializeStorage({
+          token: response["token"],
+          tokenExpirationDate: new Date(),
+          email: loginUserInfo.email
+        })
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
   return (
     <>
       <div style={{ width: '100%', height: '100%' }}>
@@ -14,16 +45,16 @@ export default function Login() {
               <div>
                 <h4 style={{ textAlign: 'center', color: '#0dcaf0' }}>Welcome back!</h4>
                 <p style={{ textAlign: 'center', color: '#0dcaf0' }}>Log In to your account</p>
-                <form style={{ color: 'black' }} onSubmit={(e) => e.preventDefault()}>
+                <form onSubmit={(e) => e.preventDefault()} style={{ color: 'black' }}>
                   <div className="form-group">
                     <label htmlFor="exampleInputEmail1">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" />
+                    <input type="email" value={loginUserInfo.email} name="email" onChange={handleInputChange} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email address" />
                   </div><br />
                   <div className="form-group">
                     <label htmlFor="exampleInputPassword1">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                    <input type="password" value={loginUserInfo.password} name="password" onChange={handleInputChange} className="form-control" id="exampleInputPassword1" placeholder="Password" />
                   </div><br />
-                  <button type="submit" className="btn btn-info text-white" style={{ width: '100%' }}>Log In</button><br /><br />
+                  <button type="submit" onClick={() => login()} className="btn btn-info text-white" style={{ width: '100%' }}>Log In</button><br /><br />
                   <small>Don't have an account? <a href="/register" className="text-primary">Register</a>.</small>
                 </form>
               </div>

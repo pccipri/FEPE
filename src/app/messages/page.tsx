@@ -32,7 +32,7 @@ export default function Messages() {
             </div>
 
             <div className="row align-items-center">
-                <div className="text-left">
+                <div className="text-center">
                     <table className="table table-hover mx-auto border" style={{ width: '100%' }}>
                         <thead>
                             <tr>
@@ -45,8 +45,8 @@ export default function Messages() {
                         <tbody>
                             {messages.map((message: Message<User>, index: number) => <tr key={index}>
                                 <th className="align-middle" scope="row">{message.id}</th>
-                                <td className="align-middle text-truncate" style={{maxWidth: '200px'}}>{message.user_id.email}</td>
-                                <td className="align-middle text-truncate" style={{maxWidth: '300px'}} >{message.message}</td>
+                                <td className="align-middle">{message.user_id.email}</td>
+                                <td className="align-middle">{message.message}</td>
                                 <td className="align-middle">
                                     <button type="button" onClick={() => setSelectedMessage(message.id)} id="submit" name="submit" data-bs-toggle="modal" data-bs-target="#modalMessage" className="btn btn-danger">Delete</button>
                                 </td>
@@ -65,7 +65,7 @@ export default function Messages() {
                 <div className="modal-dialog" role="document">
                     <div className="modal-content">
                         <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Delete message</h5>
+                            <h5 className="modal-title" id="exampleModalLabel">Delete product</h5>
                             <button type="button" className="btn" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>

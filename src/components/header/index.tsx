@@ -1,7 +1,14 @@
+"use client"
+
+import { useAuth } from '@/contexts/AuthContext';
 import Image from 'next/image'
+import { usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function Header() {
+  const pathname = usePathname();
+  const { isUserLogged, logout } = useAuth();
+
 
   return (
     <main>
@@ -21,25 +28,29 @@ export default function Header() {
               <li className="nav-item">
                 <a className="nav-link" href="/shop">Shop</a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/account">My Account</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/cart">
-                  <span className="position-relative"><Image src="/images/cart2.svg" alt="Shopping Cart" width={26} height={26} />
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill" style={{ backgroundColor: '#006837' }}>3</span>
-                  </span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/contact">Contact</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/login">Log In</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/database">DB Actions</a>
-              </li>
+              {isUserLogged &&
+                <><li className="nav-item">
+                  <a className="nav-link" href="/account">My Account</a>
+                </li><li className="nav-item">
+                    <a className="nav-link" href="/cart">
+                      <span className="position-relative"><Image src="/images/cart2.svg" alt="Shopping Cart" width={26} height={26} />
+                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill" style={{ backgroundColor: '#006837' }}>2</span>
+                      </span>
+                    </a>
+                  </li><li className="nav-item">
+                    <a className="nav-link" href="/contact">Contact</a>
+                  </li><li className="nav-item">
+                    <a className="nav-link" href="/database">DB Actions</a>
+                  </li></>
+              }
+              {!isUserLogged &&
+                <li className="nav-item">
+                  <a className="nav-link" href="/login">Log In</a>
+                </li>}
+              {isUserLogged &&
+                <li className="nav-item" onClick={() => logout()}>
+                  <a className="nav-link" style={{ cursor: 'pointer' }}>Log Out</a>
+                </li>}
             </ul>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />

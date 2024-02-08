@@ -33,7 +33,7 @@ export default function Categories() {
             </div>
 
             <div className="row align-items-center">
-                <div className="text-left">
+                <div className="text-center">
                     <table className="table table-hover mx-auto border" style={{ width: '100%' }}>
                         <thead>
                             <tr>

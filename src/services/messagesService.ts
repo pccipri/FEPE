@@ -42,9 +42,7 @@ export default async function messageRequestHandler(requestMethod: RequestMethod
         break; 
      }
      case "PUT": { 
-        try {
-          console.log(updatedMessage);
-          
+        try {          
             const response = await fetch(`${API_BASE_URL + API_ROUTES.MESSAGES}/${id}`, {
               method: 'PUT',
               headers: {

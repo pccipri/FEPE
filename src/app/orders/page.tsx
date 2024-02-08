@@ -1,5 +1,3 @@
-'use client'
-
 export default function Orders() {
     return (
         <div className='mx-auto' style={{ width: '90vw' }}>

@@ -43,8 +43,6 @@ export default async function productRequestHandler(requestMethod: RequestMethod
      }
      case "PUT": { 
         try {
-          console.log(updatedProduct);
-          
             const response = await fetch(`${API_BASE_URL + API_ROUTES.PRODUCTS}/${id}`, {
               method: 'PUT',
               headers: {
