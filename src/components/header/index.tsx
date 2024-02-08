@@ -27,7 +27,7 @@ export default function Header() {
               <li className="nav-item">
                 <a className="nav-link" href="/cart">
                   <span className="position-relative"><Image src="/images/cart2.svg" alt="Shopping Cart" width={26} height={26} />
-                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill" style={{ backgroundColor: '#006837' }}>2</span>
+                    <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill" style={{ backgroundColor: '#006837' }}>3</span>
                   </span>
                 </a>
               </li>
