@@ -42,7 +42,7 @@ export default function EditCategory({ params }: { params: { id: string } }) {
                             <div>
                                 <h4 style={{ textAlign: 'center', color: '#0dcaf0' }}>Edit category</h4>
                                 <br />
-                                <form style={{ color: 'black', width: '30vw' }} onSubmit={(e) => e.preventDefault()}>
+                                <form style={{ color: 'black', width: '30vw' }} >
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">Name</label>
                                         <input value={toEditCategory.name} name="name" onChange={handleInputChange} type="text" className="form-control" id="Name" placeholder="Name" />

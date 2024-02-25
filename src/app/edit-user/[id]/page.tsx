@@ -7,9 +7,10 @@ import { useEffect, useState } from "react";
 
 export default function EditUser({ params }: { params: { id: string } }) {
     const [toEditUser, setToEditUser] = useState<User>({
-        role: '',
+        role: {name: ''},
         first_name: '',
         last_name: '',
+        username: '',
         email: '',
         password: '',
         phone_number: ''
@@ -45,7 +46,7 @@ export default function EditUser({ params }: { params: { id: string } }) {
                             <div>
                                 <h4 style={{ textAlign: 'center', color: '#0dcaf0' }}>Edit user</h4>
                                 <br/>
-                                <form style={{ color: 'black', width: '30vw' }} onSubmit={(e) => e.preventDefault()}>
+                                <form style={{ color: 'black', width: '30vw' }} >
                                     <div className="form-group">
                                         <label htmlFor="role">Role</label>
                                         <input value={toEditUser.role} name="role" onChange={handleInputChange} type="text" className="form-control" id="role" placeholder="Role" />
@@ -57,6 +58,10 @@ export default function EditUser({ params }: { params: { id: string } }) {
                                     <div className="form-group">
                                         <label htmlFor="last_name">Last Name</label>
                                         <input value={toEditUser.last_name} name="first_name" onChange={handleInputChange} type="text" className="form-control" id="last_name" placeholder="Last Name" />
+                                    </div><br />
+                                    <div className="form-group">
+                                        <label htmlFor="username">Username</label>
+                                        <input value={toEditUser.username} name="username" onChange={handleInputChange} type="text" className="form-control" id="username" placeholder="Username" />
                                     </div><br />
                                     <div className="form-group">
                                         <label htmlFor="email">Email</label>

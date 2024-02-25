@@ -33,7 +33,7 @@ export default function Products() {
             </div>
 
             <div className="row align-items-center">
-                <div className="text-start">
+                <div className="text-center">
                     <table className="table table-hover mx-auto border" style={{ width: '100%' }}>
                         <thead>
                             <tr>
@@ -49,9 +49,9 @@ export default function Products() {
                         <tbody>
                         {products.map((product: Product<Category>, index: number) => <tr key={index}>
                                 <th className="align-middle" scope="row">{product.id}</th>
-                                <td className="align-middle text-truncate" style={{maxWidth: '200px'}}>{product.name}</td>
-                                <td className="align-middle text-truncate" style={{maxWidth: '200px'}}>{product.category_id.name}</td>
-                                <td className="align-middle text-truncate" style={{maxWidth: '200px'}}>{product.description}</td>
+                                <td className="align-middle">{product.name}</td>
+                                <td className="align-middle">{product.category_id.name}</td>
+                                <td className="align-middle">{product.description}</td>
                                 <td className="align-middle">{product.image}</td>
                                 <td className="align-middle">{product.price}</td>
                                 <td className="align-middle">

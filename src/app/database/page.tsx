@@ -1,5 +1,3 @@
-'use client'
-
 export default function Database() {
     return (
         <div className="px-4 pt-5 my-5 text-center">
