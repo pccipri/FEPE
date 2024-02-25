@@ -43,9 +43,7 @@ export default async function orderRequestHandler(requestMethod: RequestMethod, 
      }
      case "PUT": { 
         try {
-          console.log(updatedOrder);
-          
-            const response = await fetch(`${API_BASE_URL + API_ROUTES.ORDERS}/${id}`, {
+\            const response = await fetch(`${API_BASE_URL + API_ROUTES.ORDERS}/${id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',

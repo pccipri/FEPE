@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import Card from '@/components/card'
 import Prod from '@/components/product'
@@ -14,21 +16,21 @@ export default function Home() {
         </div>
         <div className="carousel-item active" style={{ height: '85vh' }}>
           <Image src="/images/slider1.jpg" className="d-block w-100" alt="..." width={1080} height={600} style={{ width: '100%', height: '100%', objectFit: "none" }} />
-          <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
-            <h5 style={{color: 'white', marginBottom: '0'}}>Skin Functional pigmentation skincare set for sensitive skin</h5>
+          <div className="carousel-caption d-none d-md-block" style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
+            <h5 style={{ color: 'white', marginBottom: '0' }}>Skin Functional pigmentation skincare set for sensitive skin</h5>
           </div>
         </div>
         <div className="carousel-inner" style={{ height: '85vh' }}>
           <div className="carousel-item" data-bs-interval="10000" style={{ height: '85vh' }}>
             <Image src="/images/slider2.jpg" className="d-block w-100" alt="..." width={1080} height={600} style={{ width: '100%', height: '100%', objectFit: "none" }} />
-            <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
-              <h5 style={{color: 'white', marginBottom: '0'}}>Omega-3 fish oil concentrate with vitamin E</h5>
+            <div className="carousel-caption d-none d-md-block" style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
+              <h5 style={{ color: 'white', marginBottom: '0' }}>Omega-3 fish oil concentrate with vitamin E</h5>
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="2000" style={{ height: '85vh' }}>
             <Image src="/images/slider3.jpg" className="d-block w-100" alt="..." width={1080} height={600} style={{ width: '100%', height: '100%', objectFit: "none" }} />
-            <div className="carousel-caption d-none d-md-block" style={{backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
-              <h5 style={{color: 'white', marginBottom: '0'}}>Multivitamin and multimineral concentrate</h5>
+            <div className="carousel-caption d-none d-md-block" style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)', marginLeft: '-4.05vw', marginBottom: '-1.75vw', width: '77.3vw' }}>
+              <h5 style={{ color: 'white', marginBottom: '0' }}>Multivitamin and multimineral concentrate</h5>
             </div>
           </div>
         </div>
@@ -104,9 +106,9 @@ export default function Home() {
 
                         <div className="card-deck cardContainer">
                           <div className="row" style={{ gap: '2vw' }}>
-                            <Prod name="Robitussin Dry Cough Forte medicine" price="28,90" image="/images/robitussin.jpg" description="Provides symptomatic relief of dry, irritating and hacking coughs for up to 8 hours in adults and children."/>
-                            <Prod name="Sudafed decongestant tablets (12 Tablets)" price="27,90" image="/images/sudafed.jpg" description="With pseudoephedrine hydrochloride, which offers highly effective relief for nose and sinus congestion."/>
-                            <Prod name="Actifed multi-action tablets (12 tablets)" price="30,90" image="/images/actifed.jpg" description="Unblocks sinuses, dries runny noses, unblocks stuffy noses and clears catarrh."/>
+                            <Prod name="Robitussin Dry Cough Forte medicine" price="28,90" image="/images/robitussin.jpg" description="Provides symptomatic relief of dry, irritating and hacking coughs for up to 8 hours in adults and children." />
+                            <Prod name="Sudafed decongestant tablets (12 Tablets)" price="27,90" image="/images/sudafed.jpg" description="With pseudoephedrine hydrochloride, which offers highly effective relief for nose and sinus congestion." />
+                            <Prod name="Actifed multi-action tablets (12 tablets)" price="30,90" image="/images/actifed.jpg" description="Unblocks sinuses, dries runny noses, unblocks stuffy noses and clears catarrh." />
                           </div>
                         </div>
 
@@ -118,9 +120,9 @@ export default function Home() {
 
                         <div className="card-deck cardContainer">
                           <div className="row" style={{ gap: '2vw' }}>
-                            <Prod name="Night Nurse Capsules (10 Capsules)" price="43,90" image="/images/night-nurse.jpg" description="Relieve tickly coughs, shivers, aches and pains, runny noses, sore throats and headaches and so aids restful sleep."/>
-                            <Prod name="Strefen Intensive (16 lozenges)" price="27,90" image="/images/strefen.jpg" description="Provides effective relief from sore throat pain. Works for up to 3 hours and contains the anti-inflammatory, Flurbiprofen."/>
-                            <Prod name="Actifed multi-action dry coughs (100ml)" price="34,90" image="/images/actifed-cough.jpg" description="Relieves irritating dry coughs and other symptoms such as runny nose, nasal congestion and catarrh."/>
+                            <Prod name="Night Nurse Capsules (10 Capsules)" price="43,90" image="/images/night-nurse.jpg" description="Relieve tickly coughs, shivers, aches and pains, runny noses, sore throats and headaches and so aids restful sleep." />
+                            <Prod name="Strefen Intensive (16 lozenges)" price="27,90" image="/images/strefen.jpg" description="Provides effective relief from sore throat pain. Works for up to 3 hours and contains the anti-inflammatory, Flurbiprofen." />
+                            <Prod name="Actifed multi-action dry coughs (100ml)" price="34,90" image="/images/actifed-cough.jpg" description="Relieves irritating dry coughs and other symptoms such as runny nose, nasal congestion and catarrh." />
                           </div>
                         </div>
 
@@ -132,9 +134,9 @@ export default function Home() {
 
                         <div className="card-deck cardContainer">
                           <div className="row" style={{ gap: '2vw' }}>
-                            <Prod name="Covonia throat spray (30ml)" price="40,90" image="/images/covonia.jpg" description="Relieves the symptoms of painful, irritated sore throats. Numbs pain and fights infection."/>
-                            <Prod name="Nytol Original (20 caplets)" price="27,90" image="/images/nytol.jpg" description="Contains the active ingredients Diphenhydramine to help induce sleep in those experiencing temporary insomnia."/>
-                            <Prod name="Benylin Chesty Coughs (30ml)" price="33,90" image="/images/benylin.jpg" description="Works deep down in the chest to help loosen phlegm, helping clear bronchial congestion."/>
+                            <Prod name="Covonia throat spray (30ml)" price="40,90" image="/images/covonia.jpg" description="Relieves the symptoms of painful, irritated sore throats. Numbs pain and fights infection." />
+                            <Prod name="Nytol Original (20 caplets)" price="27,90" image="/images/nytol.jpg" description="Contains the active ingredients Diphenhydramine to help induce sleep in those experiencing temporary insomnia." />
+                            <Prod name="Benylin Chesty Coughs (30ml)" price="33,90" image="/images/benylin.jpg" description="Works deep down in the chest to help loosen phlegm, helping clear bronchial congestion." />
                           </div>
                         </div>
 
