@@ -42,9 +42,7 @@ export default async function productRequestHandler(requestMethod: RequestMethod
         break; 
      }
      case "PUT": { 
-        try {
-          console.log(updatedProduct);
-          
+        try {          
             const response = await fetch(`${API_BASE_URL + API_ROUTES.PRODUCTS}/${id}`, {
               method: 'PUT',
               headers: {
