@@ -1,3 +1,5 @@
+'use client'
+
 export default function EditOrders() {
     return (
         <>
@@ -8,7 +10,7 @@ export default function EditOrders() {
                             <div>
                                 <h4 style={{ textAlign: 'center', color: '#0dcaf0' }}>Edit orders</h4>
                                 <br/>
-                                <form style={{ color: 'black', width: '30vw' }} >
+                                <form style={{ color: 'black', width: '30vw' }} onSubmit={(e) => e.preventDefault()}>
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">User Id</label>
                                         <input type="number" className="form-control" id="UserId" placeholder="UserId" min="0" />

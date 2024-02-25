@@ -43,7 +43,9 @@ export default async function userRequestHandler(requestMethod: RequestMethod, i
      }
      case "PUT": { 
         try {
-           const response = await fetch(`${API_BASE_URL + API_ROUTES.USERS}/${id}`, {
+          console.log(updatedUser);
+          
+            const response = await fetch(`${API_BASE_URL + API_ROUTES.USERS}/${id}`, {
               method: 'PUT',
               headers: {
                 'Content-Type': 'application/json',
