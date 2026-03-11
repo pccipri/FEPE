@@ -1,6 +1,4 @@
-# Pharma Ease Frontend
-
-## Overview
+# Overview
 
 This project is the frontend for the **Pharma Ease** application. It connects to a backend API through the `NEXT_PUBLIC_API_URL` environment variable and includes pages for shopping, authentication, cart and checkout flows, contact/messages, and admin-style data management.
 
